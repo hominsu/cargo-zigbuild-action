@@ -32,8 +32,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build and push
-        uses: docker/bake-action@v6
+      - name: Build
+        uses: hominsu/cargo-zigbuild-action@v1
         with:
           name: jproxy
           args: |

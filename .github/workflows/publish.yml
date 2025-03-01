@@ -18,3 +18,5 @@ jobs:
 
       - name: Publish
         uses: actions/publish-immutable-action@v0.0.4
+        with:
+          github-token: ${{ secrets.CR_PAT }}
