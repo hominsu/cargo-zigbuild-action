@@ -30,12 +30,14 @@ describe('getInputs', () => {
     [
       0,
       new Map<string, string>([
+        ['name', ''],
         ['args', 'target=x86_64-pc-windows-gnu'],
       ]),
       {
         context: ContextSource.workflow,
         workdir: '.',
         outdir: './artifacts',
+        name: '',
         args: ['target=x86_64-pc-windows-gnu'],
         githubToken: '',
       } as Inputs
@@ -43,12 +45,14 @@ describe('getInputs', () => {
     [
       1,
       new Map<string, string>([
+        ['name', ''],
         ['args', 'target=x86_64-pc-windows-gnu\ntarget=x86_64-apple-darwin'],
       ]),
       {
         context: ContextSource.workflow,
         workdir: '.',
         outdir: './artifacts',
+        name: '',
         args: ['target=x86_64-pc-windows-gnu', 'target=x86_64-apple-darwin'],
         githubToken: '',
       } as Inputs
@@ -56,12 +60,14 @@ describe('getInputs', () => {
     [
       2,
       new Map<string, string>([
+        ['name', ''],
         ['args', 'target=x86_64-pc-windows-gnu\n#comment\ntarget=x86_64-apple-darwin'],
       ]),
       {
         context: ContextSource.workflow,
         workdir: '.',
         outdir: './artifacts',
+        name: '',
         args: ['target=x86_64-pc-windows-gnu', 'target=x86_64-apple-darwin'],
         githubToken: '',
       } as Inputs

@@ -15,6 +15,9 @@ inputs:
     description: "Output directory for the build artifacts"
     required: false
     default: './artifacts'
+  name:
+    description: "Name of binary to compile"
+    required: true
   args:
     description: "Arguments to pass to cargo/cargo-zigbuild"
     required: true

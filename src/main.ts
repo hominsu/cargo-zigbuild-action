@@ -154,6 +154,6 @@ actionsToolkit.run(async () => {
   })
 
   await core.group('Compress artifacts', async () => {
-    await compress(inputs.workdir, inputs.outdir, 'name', version.main!, targets)
+    await compress(inputs.workdir, inputs.outdir, inputs.name, version.main!, targets)
   })
 })
