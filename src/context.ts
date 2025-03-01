@@ -7,6 +7,7 @@ import { Util } from '@docker/actions-toolkit/lib/util'
 export interface Inputs {
   context: ContextSource
   workdir: string
+  outdir: string
   args: string[]
   githubToken: string
 }
@@ -15,6 +16,7 @@ export function getInputs(): Inputs {
   return {
     context: (core.getInput('context') || ContextSource.workflow) as ContextSource,
     workdir: core.getInput('workdir') || '.',
+    outdir: core.getInput('outdir') || './artifacts',
     args: Util.getInputList('args', { ignoreComma: true, comment: '#' }),
     githubToken: core.getInput('github-token')
   }

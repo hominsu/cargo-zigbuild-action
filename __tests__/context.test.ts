@@ -35,6 +35,7 @@ describe('getInputs', () => {
       {
         context: ContextSource.workflow,
         workdir: '.',
+        outdir: './artifacts',
         args: ['target=x86_64-pc-windows-gnu'],
         githubToken: '',
       } as Inputs
@@ -47,6 +48,7 @@ describe('getInputs', () => {
       {
         context: ContextSource.workflow,
         workdir: '.',
+        outdir: './artifacts',
         args: ['target=x86_64-pc-windows-gnu', 'target=x86_64-apple-darwin'],
         githubToken: '',
       } as Inputs
@@ -59,6 +61,7 @@ describe('getInputs', () => {
       {
         context: ContextSource.workflow,
         workdir: '.',
+        outdir: './artifacts',
         args: ['target=x86_64-pc-windows-gnu', 'target=x86_64-apple-darwin'],
         githubToken: '',
       } as Inputs

@@ -6,17 +6,22 @@ branding:
   icon: 'settings'
   color: 'gray-dark'
 
-# Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  workdir:
+    description: "Working directory of cargo/cargo-zigbuild execution"
+    required: false
+    default: '.'
+  outdir:
+    description: "Output directory for the build artifacts"
+    required: false
+    default: './artifacts'
+  args:
+    description: "Arguments to pass to cargo/cargo-zigbuild"
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
+  github-token:
+    description: "API token used to authenticate to a Git repository for remote definitions"
+    default: ${{ github.token }}
+    required: false
 
 runs:
   using: node20

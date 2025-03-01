@@ -42,8 +42,8 @@ async function addTargets(targets: Array<string>, env: { [key: string]: string }
 }
 
 async function compress(
-  outdir: string,
   workdir: string,
+  outdir: string,
   name: string,
   version: string,
   targets: Array<Target>
@@ -153,8 +153,7 @@ actionsToolkit.run(async () => {
     }
   })
 
-  const out = path.join(inputs.workdir, 'artifacts')
   await core.group('Compress artifacts', async () => {
-    await compress(out, inputs.workdir, 'name', version.main!, targets)
+    await compress(inputs.workdir, inputs.outdir, 'name', version.main!, targets)
   })
 })
