@@ -1,0 +1,23 @@
+name: 'Build with cargo-zigbuild'
+description: 'Github Action to build Cargo project with cargo-zigbuild'
+author: 'hominsu'
+
+branding:
+  icon: 'settings'
+  color: 'gray-dark'
+
+# Define your inputs here.
+inputs:
+  milliseconds:
+    description: Your input description here
+    required: true
+    default: '1000'
+
+# Define your outputs here.
+outputs:
+  time:
+    description: Your output description here
+
+runs:
+  using: node20
+  main: dist/index.js
