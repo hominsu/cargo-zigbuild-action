@@ -8,21 +8,21 @@ branding:
 
 inputs:
   workdir:
-    description: "Working directory of cargo/cargo-zigbuild execution"
+    description: 'Working directory of cargo/cargo-zigbuild execution'
     required: false
     default: '.'
   outdir:
-    description: "Output directory for the build artifacts"
+    description: 'Output directory for the build artifacts'
     required: false
     default: './artifacts'
   name:
-    description: "Name of binary to compile"
+    description: 'Name of binary to compile'
     required: true
   args:
-    description: "Arguments to pass to cargo/cargo-zigbuild"
+    description: 'Arguments to pass to cargo/cargo-zigbuild'
     required: true
   github-token:
-    description: "API token used to authenticate to a Git repository for remote definitions"
+    description: 'API token used to authenticate to a Git repository for remote definitions'
     default: ${{ github.token }}
     required: false
 

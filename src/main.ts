@@ -52,11 +52,10 @@ async function compress(
 
   const tasks = targets.map(async (target) => {
     try {
-      const ext = target.OS === 'windows' ? '.exe' : ''
-      const binary = path.join('target', target.toString(), 'release', `${name}${ext}`)
+      const binary = `${name}${target.OS === 'windows' ? '.exe' : ''}`
       const artifact = path.join(outdir, `${name}-${version}-${target.toString()}.tar.gz`)
 
-      core.debug(`Compressing ${binary} to ${artifact}`)
+      core.info(`Compressing ${binary} to ${artifact}`)
 
       return new Promise<void>((resolve, reject) => {
         const writeStream = fs.createWriteStream(artifact)
@@ -66,7 +65,7 @@ async function compress(
         tar
           .create(
             {
-              cwd: workdir,
+              cwd: path.join(workdir, 'target', target.toString(), 'release'),
               gzip: true,
               strict: true
             },
