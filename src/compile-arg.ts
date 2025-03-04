@@ -90,6 +90,7 @@ export function Transform(input: string[]): CompileArg[] {
 
 export function Parse(s: string): CompileArg {
   const fields = parse(s, {
+    quote: `'`,
     relaxColumnCount: true,
     skipEmptyLines: true
   })[0]

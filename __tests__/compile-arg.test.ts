@@ -61,9 +61,9 @@ describe('transform', () => {
         `target=aarch64-unknown-linux-musl`,
         `target=x86_64-unknown-linux-musl,no-default-features`,
         `target=i686-pc-windows-gnu,features=mimalloc`,
-        `target=x86_64-pc-windows-gnu,"features=mimalloc,impersonate"`,
+        `target=x86_64-pc-windows-gnu,'features=mimalloc,impersonate'`,
         `target=aarch64-apple-darwin,no-default-features,features=mimalloc`,
-        `target=x86_64-apple-darwin,no-default-features,"features=mimalloc,impersonate"`
+        `target=x86_64-apple-darwin,no-default-features,'features=mimalloc,impersonate'`
       ],
       [
         {

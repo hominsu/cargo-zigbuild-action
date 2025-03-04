@@ -325,7 +325,7 @@ describe('tag', () => {
       'tag10',
       'event_tag_v1.1.1.env',
       {
-        args: [`release,target=x86_64-pc-windows-gnu,"features=mimalloc,impersonate"`]
+        args: [`release,target=x86_64-pc-windows-gnu,'features=mimalloc,impersonate'`]
       } as Inputs,
       {
         main: '1.1.1'
@@ -450,7 +450,7 @@ describe('tag', () => {
       'tag15',
       'event_tag_v2.0.8-beta.67.env',
       {
-        args: [`release,target=x86_64-apple-darwin,"features=mimalloc,impersonate"`]
+        args: [`release,target=x86_64-apple-darwin,'features=mimalloc,impersonate'`]
       } as Inputs,
       {
         main: '2.0.8-beta.67'
